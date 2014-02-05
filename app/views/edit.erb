@@ -1,0 +1,9 @@
+<div class="container">
+  <form action="/notes/edit" method="post">
+    <input type="text" name="note[title]" value="<%= @note.title %>" /><br/>
+    <textarea name="note[content]"><%= @note.content %></textarea><br/>
+    <input type="hidden" name="note[id]" value="<%= @note.id %>" />
+    <input type="submit" value="Save"/>
+    <a href="/notes/<%= @note.id %>">Cancel</a>
+  </form>
+</div>
